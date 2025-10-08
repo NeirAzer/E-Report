@@ -67,7 +67,10 @@
       class="navbar navbar-expand-lg bg-primary-subtle position-sticky top-0 w-100 z-3 animate__animated animate__fadeInDownBig"
     >
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
           <img
             src="/assets/images/idn.png"
             alt="Logo"
@@ -134,34 +137,50 @@
     <section id="reports" class="py-5">
       <div class="container">
         <!-- Title -->
-        <div class="text-center">
-          <h1
-            class="fw-bold text-primary-emphasis"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            All Reports
-          </h1>
-          <p
-            class="lh-lg text-primary"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="500"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-            voluptate aliquid a est corporis qui quo cupiditate maxime tempora
-            dicta.
-          </p>
+        <div
+          class="d-flex justify-content-md-between justify-content-center align-items-center flex-wrap"
+        >
+          <div class="col-md-8 text-md-start text-center">
+            <h1
+              class="fw-bold text-primary-emphasis"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              All Reports
+            </h1>
+            <p
+              class="lh-lg text-primary"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+              voluptate aliquid a est corporis qui quo cupiditate maxime tempora
+              dicta.
+            </p>
+          </div>
+          <div>
+            <button
+              class="btn btn-primary px-4"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-bs-toggle="modal"
+              data-bs-target="#AddModal"
+            >
+              <i class="fa-duotone fa-solid fa-square-plus me-3"></i>
+              Tambah Laporan
+            </button>
+          </div>
         </div>
 
         <!-- Filter -->
         <div
-          class="row g-3 mt-5"
+          class="row g-3 mt-2"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="500"
         >
-          <div class="col-md-5">
+          <div class="col-md-4">
             <input
               type="text"
               class="form-control shadow-sm"
@@ -183,7 +202,7 @@
               <option value="">Terbanyak</option>
             </select>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-2">
             <button class="btn btn-primary shadow-sm w-100">
               <i class="fa-duotone fa-solid fa-filter"></i> Filter
             </button>
@@ -364,6 +383,99 @@
       </div>
     </section>
     <!-- End  -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="AddModal"
+      tabindex="-1"
+      aria-labelledby="AddModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <i class="fa-duotone fa-solid fa-pen-to-square me-3"></i>
+              Add Report
+            </h1>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form action="">
+            <div class="modal-body px-md-5 px-3">
+              <div class="mb-3">
+                <label for="" class="form-label fw-semibold">
+                  <i class="fa-duotone fa-solid fa-pen-nib"></i>
+                  Judul Laporan :
+                </label>
+                <input
+                  type="text"
+                  class="form-control shadow-sm"
+                  placeholder="Masukan judul laporan"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label fw-semibold"
+                  ><i class="fa-duotone fa-solid fa-layer-group"></i>
+                  Pilih Kategori :
+                </label>
+                <select class="form-select shadow-sm" name="" id="">
+                  <option value="">Pilih Kategori</option>
+                  <option value="Akademik">Akademik</option>
+                  <option value="Fasilitas">Fasilitas</option>
+                  <option value="anonymous">anonymous</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label fw-semibold"
+                  ><i class="fa-duotone fa-solid fa-notebook"></i>
+                  Isi Laporan :
+                </label>
+                <textarea
+                  class="form-control shadow-sm"
+                  placeholder="Masukan isi laporan"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label fw-semibold"
+                  ><i class="fa-duotone fa-solid fa-upload"></i>
+                  Upload Gambar :
+                </label>
+                <input
+                  type="file"
+                  class="form-control shadow-sm"
+                  placeholder="Upload gambar"
+                  accept="image/*"
+                  required
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fa-duotone fa-solid fa-paper-plane"></i>
+                Kirim Laporan
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End -->
 
     <!-- Footer -->
     <footer class="bg-primary py-5">
